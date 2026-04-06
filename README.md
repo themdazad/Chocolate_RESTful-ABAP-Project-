@@ -31,38 +31,6 @@ SAP RAP ek modern framework hai jo SAP ne banaya hai **Fiori Apps** aur **OData 
 | **Behavior** | BDEF — create, update, delete allowed hai ya nahi |
 | **Service** | OData — browser/Fiori tak data pohonchata hai |
 
-## 🏗️ RAP Architecture — Simple Diagram
-
-`┌─────────────────────────────────────────────┐
-│              FIORI APP (Browser)            │
-└────────────────────┬────────────────────────┘
-                     ↓
-┌─────────────────────────────────────────────┐
-│         SERVICE BINDING (ZSB_CHOCOLATE)     │
-│         OData V2/V4 Endpoint                │
-└────────────────────┬────────────────────────┘
-                     ↓
-┌─────────────────────────────────────────────┐
-│      SERVICE DEFINITION (ZUI_CHOCOLATE)     │
-│      Expose which entities to OData         │
-└────────────────────┬────────────────────────┘
-                     ↓
-┌─────────────────────────────────────────────┐
-│    CONSUMPTION VIEWS  (ZC_ — UI Layer)      │
-│    ZC_CHOCOLATE + ZC_CHOCOLATE_PRICE        │
-│    @UI annotations — what Fiori sees        │
-└────────────────────┬────────────────────────┘
-                     ↓
-┌─────────────────────────────────────────────┐
-│    INTERFACE VIEWS  (ZI_ — BO Layer)        │
-│    ZI_CHOCOLATE + ZI_CHOCOLATE_PRICE        │
-│    Stable data model — composition tree     │
-└────────────────────┬────────────────────────┘
-                     ↓
-┌─────────────────────────────────────────────┐
-│       DATABASE TABLES  (Physical Storage)   │
-│       ZCHOCOLATE + ZCHOCOLATE_PRICE         │
-└─────────────────────────────────────────────┘`
 
 ## 📦 Project Info
 
